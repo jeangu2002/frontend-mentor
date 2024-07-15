@@ -3,7 +3,269 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Room homepage</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+      .attribution {
+        margin-top: 5rem;
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="css/main.css" />
   </head>
-  <body></body>
+  <body>
+    <main>
+      <section class="hero">
+        <div class="slider">
+          <header>
+            <button class="hamburger-menu">
+              <img src="images/icon-hamburger.svg" alt="icon hamburger" />
+            </button>
+            <div class="logo">
+              <img src="images/logo.svg" alt="logo" />
+            </div>
+            <nav class="navigation">
+              <ul>
+                <li><a href="#" class="navigation__link">Home</a></li>
+                <li><a href="#" class="navigation__link">Shop</a></li>
+                <li><a href="#" class="navigation__link">About</a></li>
+                <li><a href="#" class="navigation__link">Contact</a></li>
+              </ul>
+            </nav>
+            <nav class="navigation--mobile">
+              <button class="mobile-menu-close-btn">
+                <img src="images/icon-close.svg" alt="icon close" />
+              </button>
+              <ul>
+                <li><a href="#" class="navigation__link">Home</a></li>
+                <li><a href="#" class="navigation__link">Shop</a></li>
+                <li><a href="#" class="navigation__link">About</a></li>
+                <li><a href="#" class="navigation__link">Contact</a></li>
+              </ul>
+            </nav>
+          </header>
+          <div class="slider__images">
+            <img
+              src="images/desktop-image-hero-1.jpg"
+              srcset="images/mobile-image-hero-1.jpg w480, images/mobile-image-hero-1.jpg w800"
+              sizes="(max-width: 600px) 480px,
+              800px"
+              alt="desktop image hero 1"
+              class="active"
+            />
+            <img
+              src="images/desktop-image-hero-2.jpg"
+              alt="desktop image hero 2"
+            />
+            <img
+              src="images/desktop-image-hero-3.jpg"
+              alt="desktop image hero 3"
+            />
+            <div class="slider__nav">
+              <button class="slider__previous">
+                <img src="images/icon-angle-left.svg" alt="arrow left" />
+              </button>
+              <button class="slider__next">
+                <img src="images/icon-angle-right.svg" alt="arrow right" />
+              </button>
+            </div>
+          </div>
+          <div class="slider__description">
+            <div class="slider__nav">
+              <button class="slider__previous">
+                <img src="images/icon-angle-left.svg" alt="arrow left" />
+              </button>
+              <button class="slider__next">
+                <img src="images/icon-angle-right.svg" alt="arrow right" />
+              </button>
+            </div>
+            <div class="slider__content">
+              <div class="slider--active-content">
+                <div class="mask">
+                  <h1 class="slider__heading">
+                    Discover innovative ways to decorate
+                  </h1>
+                </div>
+
+                <div class="mask">
+                  <p class="slider__text">
+                    We provide unmatched quality, comfort, and style for
+                    property owners across the country. Our experts combine form
+                    and function in bringing your vision to life. Create a room
+                    in your own style with our collection and make your property
+                    a reflection of you and what you love.
+                  </p>
+                </div>
+
+                <a href="#" class="slider__cta"
+                  ><span>Shop now</span
+                  ><svg
+                    width="40"
+                    height="12"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z"
+                      fill="#000"
+                      fill-rule="nonzero"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <div>
+                <div class="mask">
+                  <h1 class="slider__heading">
+                    We are available all across the globe
+                  </h1>
+                </div>
+                <div class="mask">
+                  <p class="slider__text">
+                    With stores all over the world, it's easy for you to find
+                    furniture for your home or place of business. Locally, we’re
+                    in most major cities throughout the country. Find the branch
+                    nearest you using our store locator. Any questions? Don't
+                    hesitate to contact us today.
+                  </p>
+                </div>
+
+                <a href="#" class="slider__cta">
+                  <span>Shop now</span
+                  ><svg
+                    width="40"
+                    height="12"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z"
+                      fill="#000"
+                      fill-rule="nonzero"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <div>
+                <h1 class="slider__heading">
+                  <div class="mask">Manufactured with the best materials</div>
+                </h1>
+                <div class="mask">
+                  <p class="slider__text">
+                    Our modern furniture store provide a high level of quality.
+                    Our company has invested in advanced technology to ensure
+                    that every product is made as perfect and as consistent as
+                    possible. With three decades of experience in this industry,
+                    we understand what customers want for their home and office.
+                  </p>
+                </div>
+
+                <a href="#" class="slider__cta">
+                  <span>Shop now</span
+                  ><svg
+                    width="40"
+                    height="12"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z"
+                      fill="#000"
+                      fill-rule="nonzero"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div><img src="images/image-about-dark.jpg" alt="dark chair" /></div>
+        <div>
+          <h1>About our furniture</h1>
+          <p>
+            Our multifunctional collection blends design and function to suit
+            your individual taste. Make each room unique, or pick a cohesive
+            theme that best express your interests and what inspires you. Find
+            the furniture pieces you need, from traditional to contemporary
+            styles or anything in between. Product specialists are available to
+            help you create your dream space.
+          </p>
+        </div>
+        <div><img src="images/image-about-light.jpg" alt="light chair" /></div>
+      </section>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Jean Gustave NSABIYERA</a>.
+      </div>
+    </main>
+    <script>
+      let currentSliderPosition = 0;
+      window.addEventListener("DOMContentLoaded", () => {
+        const previousSliderBtns =
+          document.querySelectorAll(".slider__previous");
+        const nextSliderBtns = document.querySelectorAll(".slider__next");
+        const sliderContents = Array.from(
+          document.querySelectorAll(".slider__content > *")
+        );
+        const sliderImages = Array.from(
+          document.querySelectorAll(".slider__images > *")
+        );
+
+        /* document.querySelector(".slider__images").style.height =
+          document.querySelector(".slider__images > img").offsetHeight + "px";
+        document.querySelector(".slider__images").style.width =
+          document.querySelector(".slider__images > img").offsetWidth + "px"; */
+        nextSliderBtns.forEach((btn) =>
+          btn.addEventListener("click", () => {
+            currentSliderPosition = (currentSliderPosition + 1) % 3;
+            changeSlide(currentSliderPosition);
+          })
+        );
+
+        previousSliderBtns.forEach((btn) =>
+          btn.addEventListener("click", () => {
+            currentSliderPosition = Math.abs(currentSliderPosition - 1) % 3;
+            changeSlide(currentSliderPosition);
+          })
+        );
+
+        function changeSlide(index) {
+          document
+            .querySelector(".slider--active-content")
+            ?.classList.remove("slider--active-content");
+          document.querySelector("img.active")?.classList.remove("active");
+          sliderContents[index].classList.add("slider--active-content");
+          sliderImages[index].classList.add("active");
+        }
+      });
+      const mobileNav = document.querySelector(".navigation--mobile");
+      document
+        .querySelector(".mobile-menu-close-btn")
+        .addEventListener("click", () => {
+          mobileNav.classList.remove("open");
+        });
+
+      document
+        .querySelector(".hamburger-menu")
+        .addEventListener("click", () => {
+          mobileNav.classList.add("open");
+        });
+
+      window
+        .matchMedia("(min-width: 1025px)")
+        .addEventListener("change", () => {
+          mobileNav.classList.remove("open");
+        });
+    </script>
+  </body>
 </html>
