@@ -170,7 +170,6 @@ main {
       grid-column: 1 /2;
       grid-row: 1 / 2;
       flex: 1;
-      opacity: 0;
       transition: opacity 350ms;
       width: 100%;
       &.active {
@@ -216,7 +215,7 @@ main {
 .slider__previous,
 .slider__next {
   background-color: var(--cl-black);
-  padding: 1rem;
+  padding: 3rem;
   color: var(--cl-white);
   &:hover {
     background-color: var(--cl-dark-gray);
