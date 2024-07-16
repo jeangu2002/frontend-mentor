@@ -218,12 +218,18 @@ main {
 .slider__previous,
 .slider__next {
   background-color: var(--cl-black);
-  padding: 3rem;
+  padding: 2rem;
   color: var(--cl-white);
 }
 .slider__previous:hover,
 .slider__next:hover {
   background-color: var(--cl-dark-gray);
+}
+@media screen and (min-width: 1125px) {
+  .slider__previous,
+  .slider__next {
+    padding: 3rem;
+  }
 }
 
 .slider,

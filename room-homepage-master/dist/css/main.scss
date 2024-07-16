@@ -215,10 +215,13 @@ main {
 .slider__previous,
 .slider__next {
   background-color: var(--cl-black);
-  padding: 3rem;
+  padding: 2rem;
   color: var(--cl-white);
   &:hover {
     background-color: var(--cl-dark-gray);
+  }
+  @include desktopBp() {
+    padding: 3rem;
   }
 }
 
