@@ -179,8 +179,11 @@ main {
   transition: opacity 350ms;
   width: 100%;
 }
+.slider__images img:not(.slider__nav img) {
+  opacity: 0;
+}
 .slider__images img.active {
-  opacity: 1;
+  opacity: 1 !important;
 }
 @media screen and (min-width: 1125px) {
   .slider__images {
