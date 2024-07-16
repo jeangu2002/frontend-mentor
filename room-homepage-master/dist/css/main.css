@@ -315,6 +315,7 @@ main {
 .slider__text {
   transform: translateY(100%);
   transition: transform 350ms ease-in;
+  color: var(--cl-dark-gray);
 }
 
 .slider__cta {
