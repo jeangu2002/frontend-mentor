@@ -159,6 +159,7 @@ main {
     position: absolute;
     bottom: 0;
     right: 0;
+    z-index: 999;
     @include desktopBp() {
       left: 0;
     }
