@@ -214,8 +214,8 @@ main {
   align-self: flex-start;
   display: block;
 }
-.slider__cta:hover + svg {
-  animation: fadeOut 400ms;
+.slider__cta:hover > svg {
+  animation: fadeOut 900ms infinite;
 }
 
 .slider__previous,
@@ -347,5 +347,6 @@ main {
   }
   100% {
     transform: translateX(0);
+    opacity: 0;
   }
 }/*# sourceMappingURL=main.css.map */

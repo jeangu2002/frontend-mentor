@@ -210,8 +210,8 @@ main {
     align-self: flex-start;
     display: block;
 
-    &:hover + svg {
-      animation: fadeOut 400ms;
+    &:hover > svg {
+      animation: fadeOut 900ms infinite;
     }
   }
 }
@@ -341,5 +341,6 @@ main {
 
   100% {
     transform: translateX(0);
+    opacity: 0;
   }
 }
