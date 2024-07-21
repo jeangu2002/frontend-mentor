@@ -1,5 +1,8 @@
 {
   "rewrites": [
-	{ "source": "/faq-accordion", "destination": "https://faq-accordion.jeangu2002.vercel.com"}
-
+    {
+      "source": "/faq-accordion",
+      "destination": "https://faq-accordion.jeangu2002.vercel.com"
+    }
   ]
+}
