@@ -28,7 +28,7 @@
           <h1>FAQs</h1>
         </div>
 
-        <div class="collapsible">
+        <div class="collapsible" aria-expanded="false">
           <div class="heading-container">
             <h2>What is Frontend Mentor, and how will it help me?</h2>
             <button class="btn-expand" aria-label="expand">
@@ -43,7 +43,7 @@
             for portfolio building.
           </p>
         </div>
-        <div class="collapsible">
+        <div class="collapsible" aria-expanded="false">
           <div class="heading-container">
             <h2>Is Frontend Mentor free?</h2>
             <button class="btn-expand" aria-label="expand">
@@ -57,7 +57,7 @@
             suitable for all skill levels.
           </p>
         </div>
-        <div class="collapsible">
+        <div class="collapsible" aria-expanded="false">
           <div class="heading-container">
             <h2>Can I use Frontend Mentor projects in my portfolio?</h2>
             <button class="btn-expand" aria-label="expand">
@@ -70,7 +70,7 @@
             potential employers!
           </p>
         </div>
-        <div class="collapsible">
+        <div class="collapsible" aria-expanded="false">
           <div class="heading-container">
             <h2>
               How can I get help if I'm stuck on a Frontend Mentor challenge?
@@ -97,29 +97,47 @@
           let expandBtn = collapsible.querySelector(".btn-expand");
           expandBtn.addEventListener("click", (e) => {
             const { currentTarget: button } = e;
-            console.log();
+
             const isExpanded = collapsibleText.dataset.expanded;
             if (isExpanded === "false") {
-              collapsibleText.animate([{ height: `${height}px` }], {
-                duration: 700,
-                fill: "forwards",
-              });
-              collapsibleText.dataset.expanded = "true";
-              button
-                .querySelector("img")
-                ?.setAttribute("src", "assets/images/icon-minus.svg");
+              const expandedCollapsible = document.querySelector(
+                '[aria-expanded="true"]'
+              );
+              if (expandedCollapsible) {
+                changeHeight(expandedCollapsible, 0);
+              }
+              changeHeight(collapsible, height);
             } else {
-              collapsibleText.animate([{ height: `0px` }], {
-                duration: 700,
-                fill: "forwards",
-              });
-              collapsibleText.dataset.expanded = "false";
-              button
-                .querySelector("img")
-                ?.setAttribute("src", "assets/images/icon-plus.svg");
+              changeHeight(collapsible, 0);
             }
           });
         });
+
+        function changeHeight(collapsible, height) {
+          const collapsibleText = collapsible?.querySelector("p");
+          const isExpanded = collapsibleText?.dataset.expanded;
+          collapsibleText?.animate([{ height: `${height}px` }], {
+            duration: 700,
+            fill: "forwards",
+          });
+
+          collapsible
+            ?.querySelector("button > img")
+            ?.setAttribute(
+              "src",
+              `assets/images/icon-${
+                isExpanded === "false" ? "minus" : "plus"
+              }.svg`
+            );
+          height > 0
+            ? (collapsibleText.dataset.expanded = "true")
+            : (collapsibleText.dataset.expanded = "false");
+
+          collapsible.setAttribute(
+            "aria-expanded",
+            height > 0 ? "true" : "false"
+          );
+        }
       });
     </script>
   </body>
