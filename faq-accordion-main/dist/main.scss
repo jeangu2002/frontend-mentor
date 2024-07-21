@@ -1,0 +1,101 @@
+:root {
+  --cl-white: hsl(0, 0%, 100%);
+  --cl-light-pink: hsl(275, 100%, 97%);
+  --cl-grayish-purple: hsl(292, 16%, 49%);
+  --cl-dark-purple: hsl(292, 42%, 14%);
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: WorkSans;
+  src: url("assets/fonts/static/WorkSans-Regular.ttf");
+}
+@font-face {
+  font-family: WorkSans;
+  src: url("assets/fonts/static/WorkSans-Bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: WorkSans;
+  src: url("assets/fonts/static/WorkSans-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@mixin desktopBp {
+  @media screen and (min-width: 800px) {
+    @content;
+  }
+}
+
+button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+body {
+  background-color: var(--cl-light-pink);
+  display: flex;
+  justify-content: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: WorkSans, sans-serif;
+}
+
+main {
+  width: 1440px;
+  background-image: url("./assets/images/background-pattern-mobile.svg");
+  background-repeat: repeat-x;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  @include desktopBp() {
+    background-image: url("./assets/images/background-pattern-desktop.svg");
+  }
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+.container {
+  background-color: var(--cl-white);
+  max-width: 450px;
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  width: 70%;
+  margin-top: 200px;
+  @include desktopBp() {
+    width: unset;
+  }
+}
+
+.title-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  .icon--star {
+    height: 2.2rem;
+  }
+}
+
+.heading-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+p {
+  overflow: hidden;
+}
