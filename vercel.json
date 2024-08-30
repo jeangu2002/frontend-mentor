@@ -3,6 +3,10 @@
     {
       "source": "/faq-accordion",
       "destination": "https://faq-accordion.jeangu2002.vercel.com"
+    },
+    {
+      "source": "/easybank-landing-page-master",
+      "destination": "https://easybank-landing-page.jeangu2002.vercel.com"
     }
   ]
 }
