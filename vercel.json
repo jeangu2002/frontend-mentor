@@ -5,7 +5,7 @@
       "destination": "https://faq-accordion.jeangu2002.vercel.com"
     },
     {
-      "source": "/easybank-landing-page-master",
+      "source": "/easybank-landing-page-master/dist",
       "destination": "https://easybank-landing-page.jeangu2002.vercel.com"
     }
   ]
