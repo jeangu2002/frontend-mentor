@@ -1,0 +1,5 @@
+[[redirects]]
+from = "/easbank-landing-page/*"
+to = "https://easybank-landing-page.netlify.app/"
+status = 200
+force = false
